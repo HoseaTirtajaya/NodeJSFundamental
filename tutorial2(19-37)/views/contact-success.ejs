@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Name: Hosea Tirtajaya</h1>
+    <p>Software Engineer</p>
+    <p><%= data.who%></p>
+    <!-- query dari url http://127.0.0.1:3000/contact?dept=marketing&person=joe -->
+    <h1>CONTACT US!</h1>
+    <p>Thanks for getting in touch!</p>
+    <p>
+      You contacted <%= data.who %> in the department <% data.dept %> with email
+      <%= data.email%>
+    </p>
+  </body>
+</html>
+<!-- <form id="contact-form">
+          (THIS IS THE FORM THAT TAKING DATA FROM URL QUERY FROM APP)
+          <label for="who">Who do you want to contact?</label>
+          <input type="text" name="who" id="who" value="<%=qs.person%>" />
+          <label for="department">Which Department?</label>
+          <input
+            type="text"
+            name="department"
+            id="department"
+            value="<%=qs.dept%>"
+          />
+          <label for="email">Your Email</label>
+          <input type="text" name="email" id="email" />
+          <input type="submit" value="submit" />
+        </form> -->
